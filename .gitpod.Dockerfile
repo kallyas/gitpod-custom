@@ -11,8 +11,8 @@ RUN sudo apt-get update && \
     sudo apt-get install -y zsh neovim google-chrome-stable
     
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-    sudo apt-add-repository -u https://cli.github.com/packages
-    sudo apt install gh
+RUN sudo apt-add-repository -u https://cli.github.com/packages
+RUN sudo apt install gh
 
 # set the zsh theme 
 ENV ZSH_THEME cloud
