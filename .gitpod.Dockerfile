@@ -9,6 +9,10 @@ RUN sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ st
 RUN sudo add-apt-repository -y ppa:neovim-ppa/unstable
 RUN sudo apt-get update && \
     sudo apt-get install -y zsh neovim google-chrome-stable
+    
+RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+    sudo apt-add-repository -u https://cli.github.com/packages
+    sudo apt install gh
 
 # set the zsh theme 
 ENV ZSH_THEME cloud
